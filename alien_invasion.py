@@ -1,3 +1,6 @@
+# 01 crear ventana fondo negro dimensiones 1200x800 titulo cabeza ventana
+
+
 import sys
 import pygame
 
@@ -8,6 +11,7 @@ class AlienInvasion:
         pygame.init()
         self.screen = pygame.display.set_mode(( 1200, 800 ))
         pygame.display.set_caption("Alien Invasion")
+        self.bg_color = (230, 230, 230)
 
 
 
@@ -18,6 +22,9 @@ class AlienInvasion:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+
+            self.screen.fill(self.bg_color)        
+            pygame.display.flip()
                     
 
 
